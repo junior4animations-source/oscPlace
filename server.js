@@ -24,6 +24,7 @@ io.emit("pixelPlaced",data)
 
 })
 
-server.listen(3000,()=>{
+server.listen(process.env.PORT || 3000)
 console.log("Servidor rodando")
+
 })
