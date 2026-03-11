@@ -1,0 +1,156 @@
+body{
+margin:0;
+background:#f2f2f2;
+overflow:hidden;
+font-family:Poppins;
+}
+
+#board{
+position:absolute;
+top:0;
+left:0;
+z-index:1;
+}
+
+#logo{
+position:fixed;
+top:15px;
+left:15px;
+width:120px;
+z-index:1000;
+cursor:pointer;
+transition:0.3s;
+}
+
+#logo:hover{
+transform:scale(1.1) rotate(10deg);
+}
+
+#ui{
+position:fixed;
+left:20px;
+top:50%;
+transform:translateY(-50%);
+display:flex;
+flex-direction:column;
+gap:15px;
+z-index:1000;
+}
+
+button{
+width:60px;
+height:60px;
+background:#d9d9d9;
+border-radius:50%;
+border:3px solid #bfbfbf;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+box-shadow:0 6px 15px rgba(0,0,0,0.25);
+transition:0.2s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+button:active{
+transform:scale(0.9);
+}
+
+.material-icons{
+font-size:28px;
+}
+
+#placeButton{
+position:fixed;
+bottom:25px;
+left:50%;
+transform:translateX(-50%);
+width:260px;
+height:60px;
+border-radius:40px;
+background:#d9d9d9;
+border:3px solid #bfbfbf;
+font-size:20px;
+font-weight:600;
+box-shadow:0 6px 15px rgba(0,0,0,0.25);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:1000;
+}
+
+/* PALETA */
+
+#colors{
+position:fixed;
+left:100px;
+top:50%;
+transform:translateY(-50%) scale(0.8);
+background:#e6e6e6;
+padding:10px;
+border-radius:12px;
+display:grid;
+grid-template-columns:repeat(5,30px);
+gap:8px;
+opacity:0;
+pointer-events:none;
+transition:0.25s;
+z-index:1000;
+border:3px solid #bfbfbf;
+}
+
+#colors.open{
+opacity:1;
+pointer-events:auto;
+transform:translateY(-50%) scale(1);
+}
+
+.color{
+width:30px;
+height:30px;
+border-radius:50%;
+border:2px solid rgba(0,0,0,0.2);
+cursor:pointer;
+}
+
+/* CREDITOS */
+
+#credits{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0.9);
+background:#ffffff;
+padding:30px;
+border-radius:20px;
+border:4px solid #bfbfbf;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+opacity:0;
+pointer-events:none;
+transition:0.25s;
+z-index:2000;
+text-align:center;
+}
+
+#credits.open{
+opacity:1;
+pointer-events:auto;
+transform:translate(-50%,-50%) scale(1);
+}
+
+#credits h1{
+font-size:32px;
+font-weight:800;
+}
+
+#credits h2{
+font-size:20px;
+margin-top:15px;
+}
+
+#credits p{
+font-size:14px;
+}
